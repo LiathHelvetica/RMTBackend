@@ -1,0 +1,11 @@
+GET     /test           controllers.UserController.test
+POST    /user           controllers.UserController.createUser
+POST    /login          controllers.UserController.login
+GET     /me             controllers.UserController.getUserInfo
+POST    /riddle         controllers.RiddleController.createRiddle
+DELETE  /riddle/:id     controllers.RiddleController.deleteRiddle(id)
+GET     /riddle/:id     controllers.RiddleController.getRiddle(id)
+GET     /my-riddle/:id  controllers.RiddleController.getMyRiddle(id)
+PUT     /riddle/:id     controllers.RiddleController.updateRiddle(id)
+GET     /riddles        controllers.RiddleController.getRiddles(n: Int ?= 20, page: Int ?= 0, titleContains: Option[String], contentsContains: Option[String], isAccepted: Option[Boolean], userNameContains: Option[String])
+GET     /me/riddles     controllers.RiddleController.getMyRiddles(n: Int ?= 20, page: Int ?= 0, titleContains: Option[String], contentsContains: Option[String], isAccepted: Option[Boolean])
